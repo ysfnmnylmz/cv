@@ -8,7 +8,7 @@
 
                 <h1 class="title">{{ post.title }}</h1>
                 <img class="img-thumbnail" src="{% if post.image %}{{ post.image.url }}{% endif %}">
-                <p class="content">{{ post.contenttext }}</p>
+                <p class="content">{{ post.contenttext| safe }}</p>
                 <p class="date">{{ post.publishdate }}</p>
 
             {% endfor %}
