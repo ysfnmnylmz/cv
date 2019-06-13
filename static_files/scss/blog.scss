@@ -1,0 +1,29 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-family: $Lilita;
+    font-size: 40px;
+    margin-bottom: 20px;
+
+  }
+
+  img{
+    margin: 25px;
+  }
+
+  .content{
+    font-family: $Cabin-condensed;
+    font-size: 18px;
+  }
+  .date{
+    text-align: right;
+    font-family: $Cabin-condensed;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    margin: 5px;
+  }
+}

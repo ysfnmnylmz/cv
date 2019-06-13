@@ -1,0 +1,17 @@
+{% extends 'head.html' %}
+{% load staticfiles %}
+{% block app %}
+
+    <div class="container">
+        <article class="post text-center">
+            {% for post in posts %}
+
+                <h1 class="title">{{ post.title }}</h1>
+                <img class="img-thumbnail" src="{% if post.image %}{{ post.image.url }}{% endif %}">
+                <p class="content">{{ post.contenttext }}</p>
+                <p class="date">{{ post.publishdate }}</p>
+
+            {% endfor %}
+        </article>
+    </div>
+{% endblock %}

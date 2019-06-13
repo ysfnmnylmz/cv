@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<header>
+    <div class="row title">
+        <h1 class="name"> {{ personalinfo.name }}</h1>
+        <h6 class="degree"> {{ personalinfo.degree }}</h6>
+    </div>
+    <div class="row personal-info">
+        <img class="personal-img" src="
+                {% if personalinfo.image %}{{ personalinfo.image.url }}{% else %}{% static 'images/nullphoto.jpg' %} {% endif %}">
+        <ul class="informations">
+            <li class="information-item"><p>{{ personalinfo.birthday }} {{ personalinfo.placeofbirth }}</p></li>
+            <li class="information-item"><a href="mailto:{{ personalinfo.mail }}">{{ personalinfo.mail }}</a></li>
+            <li class="information-item"><a href="tel://+{{ personalinfo.phone }}">+{{ personalinfo.phone }}</a></li>
+            <li class="information-item"><p>{{ personalinfo.city }}</p></li>
+        </ul>
+    </div>
+    <nav class="row social-btn">
+        {% for social in socials %}
+            <div class="social-btn-li">
+                <a href="{{ social.link }}">
+                    <span class="button-face {{ social.title.lower }}">
+                        <i class="fab fa-{{ social.title.lower }} social-icon"></i>
+                    </span>
+                    <span class="handle">
+                         <p class="username">{{ social.username }}</p>
+                      </span>
+                </a>
+            </div>
+        {% endfor %}
+    </nav>
+</header>

@@ -1,0 +1,47 @@
+.sections {
+  text-align: center;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.section-title {
+  margin-top: 10px;
+
+  .brackets {
+    border: 0;
+    border-top: 4px solid #000;
+    margin: 10px;
+  }
+
+  .section-head {
+    font-family: $Cabin-condensed;
+    color: black;
+    font-size: 30px;
+
+  }
+}
+
+.section-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  div {
+    margin: auto 20px;
+  }
+
+  .icon {
+    width: 75px;
+    margin: 35px auto 5px;
+  }
+
+  .desc {
+    font-family: $Cabin-condensed;
+    color: grey;
+    margin: 1px;
+  }
+}
+
+

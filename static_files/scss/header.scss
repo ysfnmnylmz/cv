@@ -1,0 +1,162 @@
+.title {
+  flex-direction: column;
+
+  .name {
+    font-family: $Lilita;
+    font-size: 45px;
+    margin: 10px auto;
+  }
+
+  .degree {
+    font-family: $Cabin-condensed;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    letter-spacing: 2px;
+    margin: 10px auto;
+    padding: 5px 10%;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }
+}
+
+.personal-info {
+  flex-direction: column;
+  text-align: center;
+
+  .personal-img {
+    margin: 30px auto;
+    border-radius: 50%;
+  }
+
+  .informations {
+    list-style: none;
+
+    .information-item {
+      font-family: $Cabin-condensed;
+      color: grey;
+      margin: 1px;
+
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+    }
+  }
+}
+
+@keyframes open {
+  0% {
+    transform-origin: 128px 30px;
+  }
+  100% {
+    transform-origin: 128px 30px;
+    transform: translateY(99%);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform-origin: 128px 30px;
+    transform: translateY(99%);
+  }
+  100% {
+    transform-origin: 128px 30px;
+    transform: translateY(1%);
+  }
+}
+
+.social-btn {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+
+  .social-btn-li {
+    margin: 15px 5px;
+
+
+    .instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+
+    .twitter {
+      background: #55acee;
+    }
+
+    .facebook {
+      background: #3b5998;
+    }
+
+    .youtube {
+      background: #c4302b;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .button-face {
+      border: none;
+      border-radius: 5%;
+      width: 140px;
+      height: 40px;
+      z-index: 1;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px, inset rgba(0, 0, 0, 0.2) 0px -1px 2px;
+      text-align: center;
+      animation: close 1s forwards, stay 1s forwards;
+    }
+
+    span {
+      display: block;
+    }
+
+    .social-icon {
+      color: white;
+      font-size: 30px;
+      margin-top: 5px;
+    }
+
+    .line {
+      height: 7px;
+      width: 1px;
+      background-color: #3f3f3f;
+      margin-left: 3px;
+    }
+
+    a {
+      color: black;
+      height: 40px;
+      width: 140px;
+      text-decoration: none;
+      position: relative;
+
+      &:hover {
+        .button-face {
+          animation: open 1s forwards, stay 1s forwards;
+        }
+      }
+    }
+
+    .handle {
+      z-index: -1;
+      margin-top: -40px;
+      border-radius: 5%;
+      width: 140px;
+      height: 40px;
+      font-size: 16px;
+      position: relative;
+      background-color: #f2f2f2;
+      color: #3f3f3f;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px, inset rgba(0, 0, 0, 0.2) 0 -1px 2px;
+      font-family: $Poppins;
+    }
+
+    .username {
+      margin-left: 4px;
+      font-family: $Poppins;
+      line-height: 40px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}

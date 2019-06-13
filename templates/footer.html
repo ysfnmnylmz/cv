@@ -1,0 +1,6 @@
+{% load staticfiles %}
+<footer>
+    {% for text in footertexts %}
+        <h1 class="footer-message text-center">{{ text.text }}</h1>
+    {% endfor %}
+</footer>

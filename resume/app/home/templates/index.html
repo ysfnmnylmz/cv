@@ -1,0 +1,33 @@
+{% extends 'head.html' %}
+{% load staticfiles %}
+{% block app %}
+    {% for section in sections %}
+        <section class="row sections">
+            <div class="row section-title">
+                <div class="col-4">
+                    <hr class="brackets">
+                </div>
+                <div class="col-4 section-head"><p>{{ section.title }}</p></div>
+                <div class="col-4">
+                    <hr class="brackets">
+                </div>
+            </div>
+            <div class="section-content">
+                {% for content in section.content_section.all %}
+                        <div>
+                            <img class="icon" src="{% if content.image %}{{ content.image.url }}{% endif %}">
+                            <p class="desc">{% if content.title %}{{ content.title }}{% endif %}</p>
+                            <p class="desc">{% if content.startdate %}{{ content.startdate }} - {{ content.enddate }}{% endif %}</p>
+                            <p class="desc">{% if content.instution %}{{ content.institution }}{% endif %}</p>
+                            <p class="desc">{% if content.faculty %}{{ content.faculty }}{% endif %}</p>
+                            <p class="desc">{% if content.department %}{{ content.department }}{% endif %}</p>
+                            <p class="desc">{% if content.city %}{{ content.city }}{% endif %}</p>
+                        </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+
+
+
+{% endblock %}

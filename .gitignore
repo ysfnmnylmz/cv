@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+*.sqlite3
+.sass-cache
+*.pyc
+/dist
+/venv
+/static
+/static_files/lib/
+__pycache__
+/node_modules
+resume/local_settings.py
+media/
+bower_components

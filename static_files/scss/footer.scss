@@ -1,0 +1,17 @@
+.footer-message {
+  font-family: $Cabin-condensed;
+  margin: 100px auto;
+  font-weight: bold;
+  font-size: 40px;
+
+  &:first-child {
+    margin-top: 200px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+
+
