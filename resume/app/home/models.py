@@ -69,7 +69,7 @@ class FooterText(models.Model):
 
 class Social(models.Model):
     SOCIAL_CHOISES=(
-        ('Facebook', 'facebook'), ('Twitter', 'twitter'), ('Instagram', 'instagram'), ('Whatsapp', 'whatsapp'), ('youtube', 'youtube')
+        ('Facebook-f', 'facebook'), ('Twitter', 'twitter'), ('Instagram', 'instagram'), ('Whatsapp', 'whatsapp'), ('youtube', 'youtube')
     )
     title = models.CharField(max_length=99, choices=SOCIAL_CHOISES, verbose_name='Select Social Media', blank=False)
     username = models.CharField(max_length=99, verbose_name='Username', blank=False)
