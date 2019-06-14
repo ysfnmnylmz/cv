@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='education',
             name='date',
-            field=models.DateField(blank='True', default=''),
+            field=models.DateField(blank='True', null=True),
         ),
         migrations.AlterField(
             model_name='education',
